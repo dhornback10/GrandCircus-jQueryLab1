@@ -89,4 +89,5 @@ input {
 .reserved {
     background-color: #ADAAAA;
     color: #CCC;
+    cursor: not-allowed;
 }

@@ -5,20 +5,20 @@ $(document).ready(function() {
 
     $("#formDiv").hide();
     $(".available").click(function() {
-    	event.preventDefault();
     	$tableNumber = $(event.target).text();
     	$(".num").html($tableNumber);
         $("#formDiv").show();
-        table_number = $(this).attr("id");
-        // $(event.target).addClass("reserved").removeClass("available");
+        table_number = $(event.target).attr("id");
+        $(event.target).addClass("reserved").removeClass("available");
     });
     $(".saveButton").click(function(){
-    	$ ("#number" + table_number).css("background-color", "#ADAAAA");
-    	$ ("#number" + table_number).css("cursor", "not-allowed");
+    	event.preventDefault();
     	$("#formDiv").hide();
+
     })
     $(".cancelButton").click(function(){
     	$("#formDiv").hide();
+    	
     });
 
 
